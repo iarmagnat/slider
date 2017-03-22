@@ -59,10 +59,15 @@ body{
 }
 
 .nextAnim {
+    -webkit-animation-name: nextTransition;
     animation-name: nextTransition;
+    -webkit-animation-duration: 1000ms;
     animation-duration: 1000ms;
+    -webkit-animation-delay: 0ms;
     animation-delay: 0ms;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
 }
 @keyframes nextTransition {
@@ -70,12 +75,22 @@ body{
         transform:translate(-220px, 0px);
     }
 }
+@-webkit-keyframes nextTransition {
+    100% {
+        transform:translate(-220px, 0px);
+    }
+}
 
 .previousAnim {
+    -webkit-animation-name: previousTransition;
     animation-name: previousTransition;
+    -webkit-animation-duration: 1000ms;
     animation-duration: 1000ms;
+    -webkit-animation-delay: 0ms;
     animation-delay: 0ms;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
 }
 @keyframes previousTransition {
@@ -83,17 +98,31 @@ body{
         transform:translate(220px, 0px);
     }
 }
+@-webkit-keyframes previousTransition {
+    100% {
+        transform:translate(220px, 0px);
+    }
+}
 
 .preview {
-
+    -webkit-animation-name: previewTransition;
     animation-name: previewTransition;
+    -webkit-animation-duration: 1000ms;
     animation-duration: 1000ms;
+    -webkit-animation-delay: 0ms;
     animation-delay: 0ms;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
     opacity: 0;
 }
 @keyframes previewTransition {
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes previewTransition {
     100% {
         opacity: 1;
     }
